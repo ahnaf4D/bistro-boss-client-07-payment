@@ -1,0 +1,17 @@
+[
+  {
+    "food_image": "https://i.ibb.co/CwNt56s/1.jpg",
+    "food_title": "Margherita Pizza",
+    "short_description": "A classic pizza topped with fresh tomatoes, mozzarella cheese, and basil leaves."
+  },
+  {
+    "food_image": "https://i.ibb.co/7NxCW0J/2.jpg",
+    "food_title": "Spaghetti Carbonara",
+    "short_description": "Creamy spaghetti with pancetta, eggs, Parmesan cheese, and black pepper."
+  },
+  {
+    "food_image": "https://i.ibb.co/VmZ7wLw/3.jpg",
+    "food_title": "Chocolate Lava Cake",
+    "short_description": "A decadent chocolate cake with a gooey molten center, served with vanilla ice cream."
+  }
+]
