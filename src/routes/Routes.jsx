@@ -15,6 +15,7 @@ import ManageItems from '../pages/Dashboard/ManageItems/ManageItems';
 import UpdateItem from '../pages/Dashboard/UpdateItem/UpdateItem';
 import Payments from '../pages/Dashboard/Payments/Payment';
 import Payment from '../pages/Dashboard/Payments/Payment';
+import PaymentHistory from '../pages/Dashboard/Payments/PaymentHistory/PaymentHistory';
 
 export const routes = createBrowserRouter([
   {
@@ -85,6 +86,10 @@ export const routes = createBrowserRouter([
         element: <UpdateItem></UpdateItem>,
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_API_BASE_URL}/menu/${params.id}`),
+      },
+      {
+        path: 'payment-history',
+        element: <PaymentHistory></PaymentHistory>,
       },
     ],
   },
