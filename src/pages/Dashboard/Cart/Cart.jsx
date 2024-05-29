@@ -2,6 +2,7 @@ import { MdDelete } from 'react-icons/md';
 import useCart from '../../../hooks/useCart';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const { cart, refetch } = useCart();
@@ -39,7 +40,15 @@ const Cart = () => {
           <h2 className='text-4xl font-bold'>
             Total Price: ${totalPrice.toFixed(2)}
           </h2>
-          <button className='btn btn-warning text-xl'>Checkout Now</button>
+          {cart.length < 1 ? (
+            <button disabled className='btn  btn-warning text-xl'>
+              Checkout
+            </button>
+          ) : (
+            <Link to='/dashboard/payment'>
+              <button className='btn btn-warning text-xl'>Checkout</button>
+            </Link>
+          )}
         </div>
         <div className='overflow-x-auto'>
           <table className='table-auto w-full'>

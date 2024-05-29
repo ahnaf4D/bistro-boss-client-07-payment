@@ -14,7 +14,7 @@ const Testimonial = () => {
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get(
-        `https://bistro-server154.vercel.app/reviews`
+        `${import.meta.env.VITE_API_BASE_URL}/reviews`
       );
       setReviews(data);
     };

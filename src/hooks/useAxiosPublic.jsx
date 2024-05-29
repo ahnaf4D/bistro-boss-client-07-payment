@@ -1,6 +1,6 @@
 import axios from 'axios';
 const axiosSecure = axios.create({
-  baseURL: `https://bistro-server154.vercel.app`,
+  baseURL: `${import.meta.env.VITE_API_BASE_URL}`,
 });
 const useAxiosPublic = () => {
   return axiosSecure;

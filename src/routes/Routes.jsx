@@ -13,6 +13,8 @@ import AllUsers from '../pages/Dashboard/AllUsers/AllUsers';
 import AddItems from '../pages/Dashboard/AddItems/AddItems';
 import ManageItems from '../pages/Dashboard/ManageItems/ManageItems';
 import UpdateItem from '../pages/Dashboard/UpdateItem/UpdateItem';
+import Payments from '../pages/Dashboard/Payments/Payment';
+import Payment from '../pages/Dashboard/Payments/Payment';
 
 export const routes = createBrowserRouter([
   {
@@ -61,6 +63,10 @@ export const routes = createBrowserRouter([
         path: 'cart', // Changed to relative path
         element: <Cart></Cart>,
       },
+      {
+        path: 'payment',
+        element: <Payment></Payment>,
+      },
       // admin routes
       {
         path: 'users',
@@ -78,7 +84,7 @@ export const routes = createBrowserRouter([
         path: 'update-item/:id',
         element: <UpdateItem></UpdateItem>,
         loader: ({ params }) =>
-          fetch(`https://bistro-server154.vercel.app/menu/${params.id}`),
+          fetch(`${import.meta.env.VITE_API_BASE_URL}/menu/${params.id}`),
       },
     ],
   },
