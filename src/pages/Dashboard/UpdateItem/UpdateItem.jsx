@@ -13,7 +13,7 @@ const UpdateItem = () => {
   const { register, handleSubmit, reset } = useForm();
   //   console.log(item);
   const onSubmit = async (data) => {
-    console.log(data);
+    // console.log(data);
     const imageFile = { image: data.image[0] };
     const res = await axiosPublic.post(image_hosting_api, imageFile, {
       headers: {
@@ -29,7 +29,7 @@ const UpdateItem = () => {
         image: res.data.data.display_url,
       };
       const menuRes = await axiosSecure.patch(`/menu/${item._id}`, menuItem);
-      console.log(menuRes.data);
+      // console.log(menuRes.data);
       if (menuRes.data.acknowledged) {
         reset();
         Swal.fire({

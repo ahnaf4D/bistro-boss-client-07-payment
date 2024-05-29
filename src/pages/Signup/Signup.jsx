@@ -21,7 +21,7 @@ const Signup = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     createUser(data.email, data.pass)
       .then(() => {
         const userInfo = {
@@ -31,7 +31,7 @@ const Signup = () => {
         // const loggedUser = result.user;
         axiosPublic.post('/users', userInfo).then((res) => {
           if (res.data.insertedId) {
-            console.log('user added to the database');
+            // console.log('user added to the database');
             Swal.fire({
               title: 'Account Creation Successfull',
               icon: 'success',

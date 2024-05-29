@@ -3,7 +3,7 @@ import MenuItem from '../../Shared/MenuItem/MenuItem';
 import PropTypes from 'prop-types';
 
 const MenuCategory = ({ items, category }) => {
-  console.log(items);
+  // console.log(items);
   return (
     <div>
       <div className='grid  gap-4 container mx-auto my-8 grid-cols-1 md:grid-cols-2'>

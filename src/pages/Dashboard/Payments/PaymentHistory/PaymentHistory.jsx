@@ -14,7 +14,7 @@ const PaymentHistory = () => {
     },
   });
   refetch();
-  console.log(payments);
+  // console.log(payments);
   return (
     <div className='container mx-auto px-4 py-8'>
       <h1 className='text-center text-4xl font-bold text-black mb-8'>
